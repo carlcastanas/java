@@ -1,5 +1,5 @@
 A>
-First we have dened an interface with the name WeekDays and method called
+//First we have dened an interface with the name WeekDays and method called
 Dotw()
 import java.rmi.Remote;
 import java.RemoteException;
@@ -9,8 +9,9 @@ void Dotw() throws RemoteException;
 }
 ----------------------------------------------------------------------------
 B>
-We have created a class named DayofWeek and implemented the interface WeekDays created in A>
-and provided body for this method which give day of the week as Monday, Tuesday ...... etc
+  
+//We have created a class named DayofWeek and implemented the interface WeekDays created in A>
+//and provided body for this method which give day of the week as Monday, Tuesday ...... etc
 // Implementing the remote interface
 public class DayofWeek implements WeekDays {
 public void Dotw() {
@@ -25,9 +26,10 @@ Calendar tarikh = Calendar.getInstance();
 tarikh.set(Integer.valueOf(year), (Integer.valueOf(month) -1), Integer.valueOf(day));
 return tarikh.getDisplayName(Calender.DAY_OF_WEEK.LONG,Locale.getDefault());
 }
+  
+  
 ----------------------------------------------------------------------------------------------------------------------
--------
-This program is of an RMI server program for day of the week
+//This program is of an RMI server program for day of the week
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.RemoteException;
@@ -52,8 +54,10 @@ e.printStackTrace();
 }
 }
 }
+                   
+                   
 ---------------------------------------------------------------------
-This is an RMI client program
+//This is an RMI client program
 import java.rmi.registry.LocateREgistry;
 import java.rmi.registry.Registry;
 public class Client {
@@ -71,8 +75,10 @@ e.printStackTrace();
 }
 }
 }
+                   
+                   
 ----------------------------------------------------------------------------
-/ This program gives number of days from January 1 to specied date
+// This program gives number of days from January 1 to specied date
 import java.util.Scanner;
 public class noOfDays {
 private static Scanner scan;
